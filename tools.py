@@ -62,6 +62,3 @@ class multitools:
                 inversed_list.append(_list[-1])
                 _list.pop(-1)
             return inversed_list
-
-a = multitools()
-print(a.lists.inverse([1, 2, 3]))
