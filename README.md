@@ -27,4 +27,4 @@
 `evenodd(mode=0) -> returns even or odd values from the list (0 = Even, 1 = Odd)`
 
 ### Encryptor
-`encrypted() -> returns a dictionary containing the encrypted data and the key`
+`encrypt() -> returns a dictionary containing the encrypted data and the key`
