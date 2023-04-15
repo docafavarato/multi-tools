@@ -62,3 +62,25 @@ class multitools:
                 inversed_list.append(_list[-1])
                 _list.pop(-1)
             return inversed_list
+        
+        def evenodd(_list: list, mode: int = 0):
+            '''0: Returns even items, 1: Returns odd items'''
+            match mode:
+                case 0:
+                    even_list = list()
+                    for item in _list:
+                        try:
+                            if item % 2 == 0:
+                                even_list.append(item)
+                        except TypeError:
+                            pass
+                    return even_list
+                case 1:
+                    odd_list = list()
+                    for item in _list:
+                        try:
+                            if item % 2 != 0:
+                                odd_list.append(item)
+                        except TypeError:
+                            pass
+                    return odd_list
