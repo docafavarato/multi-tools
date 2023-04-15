@@ -55,8 +55,3 @@ class multitools:
                 if item in _list_:
                     intersection_list.append(item)
             return intersection_list
-    
-        
-
-a = multitools()
-print(a.lists.intersection([3, 2, 1, 4, "a"], [1, 2, "a",]))
