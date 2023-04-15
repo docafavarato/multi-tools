@@ -93,6 +93,26 @@ class multitools:
                         except TypeError:
                             pass
                     return odd_list
+        
+        def shuffle(_list: list):
+            '''Returns a shuffled version of the list'''
+            import random
+            shuffled_list = list()
+            for i in range(len(_list)):
+                rand = random.choice(_list)
+                shuffled_list.append(rand)
+                _list.pop(_list.index(rand))
+            return shuffled_list
+        
+        def to_dict(_list: list):
+            '''Transforms the list into a dictionary'''
+            list_to_dict = dict()
+            for i in range(len(_list)):
+                try:
+                    list_to_dict[_list[i]] = _list[i+1]
+                except IndexError:
+                    pass
+            return list_to_dict
 
     class encryptor:
         def encrypt(data):

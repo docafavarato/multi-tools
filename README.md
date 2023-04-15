@@ -26,5 +26,9 @@
 
 `evenodd(mode=0) -> returns even or odd values from the list (0 = Even, 1 = Odd)`
 
+`shuffle() -> returns a shuffled version of the list using the random module`
+
+`to_dict() -> transforms the list into a dictionary`
+
 ### Encryptor
 `encrypt() -> returns a dictionary containing the encrypted data and the key`
