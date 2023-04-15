@@ -1,4 +1,4 @@
 # Multi-tools
 
 ## About
-> A multi-functional python module
+> A multi-functional python module.
