@@ -55,3 +55,13 @@ class multitools:
                 if item in _list_:
                     intersection_list.append(item)
             return intersection_list
+        
+        def inverse(_list: list):
+            inversed_list = list()
+            for i in range(len(_list)):
+                inversed_list.append(_list[-1])
+                _list.pop(-1)
+            return inversed_list
+
+a = multitools()
+print(a.lists.inverse([1, 2, 3]))
