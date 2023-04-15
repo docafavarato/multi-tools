@@ -30,5 +30,10 @@
 
 `to_dict() -> transforms the list into a dictionary`
 
+### Math
+`fibonacci(amount) -> returns the fibonacci sequence based on a given amount`
+
+`pythagorean_theorem(a, b) -> returns the unknown size of a right triangle`
+
 ### Encryptor
 `encrypt() -> returns a dictionary containing the encrypted data and the key`
