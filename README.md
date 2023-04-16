@@ -35,5 +35,7 @@
 
 `pythagorean_theorem(a, b) -> returns the unknown size of a right triangle`
 
+`bhaskara(a, b, c) -> returns the two roots of the given equation`
+
 ### Encryptor
 `encrypt() -> returns a dictionary containing the encrypted data and the key`

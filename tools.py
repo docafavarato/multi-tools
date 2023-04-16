@@ -149,3 +149,10 @@ class multitools:
             c = a ** 2 + b ** 2
             result = c ** 0.5
             return result
+
+        def bhaskara(a: int, b: int, c: int):
+            '''Returns the two roots of the given equation'''
+            delta = (b ** 2) - 4 * (a * c)
+            x1 = (-b + ((delta) ** 0.5)) / (2 * a)
+            x2 = (-b - ((delta) ** 0.5)) / (2 * a)
+            return [x1, x2]
