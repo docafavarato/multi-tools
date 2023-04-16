@@ -156,3 +156,8 @@ class multitools:
             x1 = (-b + ((delta) ** 0.5)) / (2 * a)
             x2 = (-b - ((delta) ** 0.5)) / (2 * a)
             return [x1, x2]
+        
+        def arithmetic_progression(a: int, r: int, pos: int):
+            '''Returns the n-th term of the sequence'''
+            x = a + (pos - 1) * r
+            return x
