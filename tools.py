@@ -131,17 +131,23 @@ class multitools:
             for letter in data:
                 rand = random.choice(random_chars)
                 encrypted += rand
-                key[letter] = rand
+                key[rand] = letter
             
             return {encrypted: key}
         
+        def decrypt(data, key):
+            '''Returns the decrypted data'''
+            decrypted = ''
+            for letter in data:
+                decrypted += key[letter]
+            return decrypted
+
     class math:
         def fibonacci(amount: int):
             '''Returns the fibonacci sequence based on a given amount'''
             sequence = [1, 1] 
             for i in range(amount): 
                 sequence.append(sequence[-1] + sequence[-2]) 
-
             return sequence 
 
         def pythagorean_theorem(a: int, b: int):

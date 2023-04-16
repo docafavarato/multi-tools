@@ -40,4 +40,6 @@
 `arithmetic_progression(a, r, pos) -> returns the n-th term of the sequence`
 
 ### Encryptor
-`encrypt() -> returns a dictionary containing the encrypted data and the key`
+`encrypt(data) -> returns a dictionary containing the encrypted data and the key`
+
+`decrypt(data, key) -> returns the decrypted data based on the given key`
