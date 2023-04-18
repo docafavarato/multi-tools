@@ -22,6 +22,8 @@
 
 `intersection() -> returns the intersected items from two different lists`
 
+`group(*args) -> returns a list with all the items from the multiple lists grouped`
+
 `inverse() -> returns the inversed list`
 
 `evenodd(mode=0) -> returns even or odd values from the list (0 = Even, 1 = Odd)`

@@ -64,6 +64,14 @@ class multitools:
                     intersection_list.append(item)
             return intersection_list
         
+        def group(*args: list) -> list:
+            '''Returns a list with all the items from the multiple lists grouped'''
+            grouped = list()
+            for _list in args:
+                for item in _list:
+                    grouped.append(item)
+            return grouped
+        
         def inverse(_list: list):
             '''Returns the inversed list'''
             inversed_list = list()
