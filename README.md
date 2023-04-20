@@ -10,15 +10,15 @@
 
 `descending() -> returns the list in descending order`
 
-`min() -> returns the lowest numeric item from the list`
+`min(*args) -> returns the lowest numeric item from the list`
 
-`max() -> returns the highest numeric item from the list`
+`max(*args) -> returns the highest numeric item from the list`
 
-`sum() -> returns the sum of all the numeric items from the list`
+`sum(*args) -> returns the sum of all the numeric items from the list`
 
-`subtraction() -> returns the subtraction of all the numeric items from the list`
+`subtraction(*args) -> returns the subtraction of all the numeric items from the list`
 
-`product() -> returns the product of all the numeric items from the list`
+`product(*args) -> returns the product of all the numeric items from the list`
 
 `intersection(*args) -> returns the intersected items from two different lists`
 
@@ -26,9 +26,9 @@
 
 `inverse() -> returns the inversed list`
 
-`evenodd(mode=0) -> returns even or odd values from the list (0 = Even, 1 = Odd)`
+`evenodd(*args, mode=0) -> returns even or odd values from the list (0 = Even, 1 = Odd)`
 
-`shuffle() -> returns a shuffled version of the list using the random module`
+`shuffle(*args) -> returns a shuffled version of the list using the random module`
 
 `to_dict() -> transforms the list into a dictionary`
 

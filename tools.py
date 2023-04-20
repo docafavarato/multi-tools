@@ -16,47 +16,58 @@ class multitools:
                 _list.remove(max(_list))
             return descending_list
         
-        def min(_list: list):
+        def min(*args: list):
             '''Returns the lowest numeric item from the list'''
-            return min(_list)
+            grouped_list = list()
+            for _list in args:
+                for item in _list:
+                    grouped_list.append(item)
+            return min(grouped_list)
         
-        def max(_list: list):
+        def max(*args: list):
             '''Returns the highest numeric item from the list'''
-            return max(_list)
+            grouped_list = list()
+            for _list in args:
+                for item in _list:
+                    grouped_list.append(item)
+            return max(grouped_list)
         
-        def sum(_list: list):
+        def sum(*args: list):
             '''Returns the sum of all the numeric items from the list'''
             total = 0
-            for item in _list:
-                try:
-                    total += item
-                except TypeError:
-                    pass
+            for _list in args:
+                for item in _list:
+                    try:
+                        total += item
+                    except TypeError:
+                        pass
             return total
 
-        def subtraction(_list: list):
+        def subtraction(*args: list):
             '''Returns the subtraction of all the numeric items from the list'''
             total = 0
-            for item in _list:
-                try:
-                    total -= item
-                except TypeError:
-                    pass
+            for _list in args:
+                for item in _list:
+                    try:
+                        total -= item
+                    except TypeError:
+                        pass
             return total
 
-        def product(_list: list):
+        def product(*args: list):
             '''Returns the product of all the numeric items from the list'''
             total = 1
-            for item in _list:
-                try:
-                    total *= int(item)
-                except TypeError:
-                    pass
-                except ValueError:
-                    pass
+            for _list in args:
+                for item in _list:
+                    try:
+                        total *= int(item)
+                    except TypeError:
+                        pass
+                    except ValueError:
+                        pass
             return total
         
-        def intersection(*args) -> list:
+        def intersection(*args: list) -> list:
             group_list = list()
             intersection_list = list()
             for _list in args:
@@ -84,36 +95,39 @@ class multitools:
                 _list.pop(-1)
             return inversed_list
         
-        def evenodd(_list: list, mode: int = 0):
+        def evenodd(*args: list, mode: int = 0):
             '''Returns even or odd values from the list (0 = Even, 1 = Odd)'''
             match mode:
                 case 0:
                     even_list = list()
-                    for item in _list:
-                        try:
-                            if item % 2 == 0:
-                                even_list.append(item)
-                        except TypeError:
-                            pass
+                    for _list in args:
+                        for item in _list:
+                            try:
+                                if item % 2 == 0:
+                                    even_list.append(item)
+                            except TypeError:
+                                pass
                     return even_list
                 case 1:
                     odd_list = list()
-                    for item in _list:
-                        try:
-                            if item % 2 != 0:
-                                odd_list.append(item)
-                        except TypeError:
-                            pass
+                    for _list in args:
+                        for item in _list:
+                            try:
+                                if item % 2 != 0:
+                                    odd_list.append(item)
+                            except TypeError:
+                                pass
                     return odd_list
         
-        def shuffle(_list: list):
+        def shuffle(*args: list):
             '''Returns a shuffled version of the list'''
             import random
             shuffled_list = list()
-            for i in range(len(_list)):
-                rand = random.choice(_list)
-                shuffled_list.append(rand)
-                _list.pop(_list.index(rand))
+            for _list in args:
+                for i in range(len(_list)):
+                    rand = random.choice(_list)
+                    shuffled_list.append(rand)
+                    _list.pop(_list.index(rand))
             return shuffled_list
         
         def to_dict(_list: list):
