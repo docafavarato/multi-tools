@@ -56,14 +56,18 @@ class multitools:
                     pass
             return total
         
-        def intersection(_list: list, _list_: list) -> list:
-            '''Returns the intersected items from two different lists'''
+        def intersection(*args) -> list:
+            group_list = list()
             intersection_list = list()
-            for item in _list:
-                if item in _list_:
-                    intersection_list.append(item)
+            for _list in args:
+                for item in _list:
+                    group_list.append(item)
+            for item in group_list:
+                if group_list.count(item) > 1:
+                    if not item in intersection_list:
+                        intersection_list.append(item)
             return intersection_list
-        
+
         def group(*args: list) -> list:
             '''Returns a list with all the items from the multiple lists grouped'''
             grouped = list()
