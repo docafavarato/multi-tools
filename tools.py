@@ -139,6 +139,26 @@ class multitools:
                 except IndexError:
                     pass
             return list_to_dict
+        
+        def clear(*args: list):
+            '''Removes all null elements from the list'''
+            cleared_list = list()
+            for _list in args:
+                for item in _list:
+                    if item:
+                        cleared_list.append(item)
+            return cleared_list
+
+        def replace(*args: list, x, y):
+            '''Replaces items from the given lists'''
+            replaced_list = list()
+            for _list in args:
+                for item in _list:
+                    if item is x:
+                        replaced_list.append(y)
+                    else:
+                        replaced_list.append(item)
+            return replaced_list
 
     class encryptor:
         def encrypt(data):

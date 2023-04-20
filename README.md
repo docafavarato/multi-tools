@@ -32,6 +32,10 @@
 
 `to_dict() -> transforms the list into a dictionary`
 
+`clear(*args) -> removes all the null items from the given lists`
+
+`replace(*args, x, y) -> replaces items from the given lists`
+
 ### Math
 `fibonacci(amount) -> returns the fibonacci sequence based on a given amount`
 
