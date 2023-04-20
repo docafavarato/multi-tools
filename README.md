@@ -20,6 +20,8 @@
 
 `product(*args) -> returns the product of all the numeric items from the list`
 
+`average(*args) -> returns the average of all the numeric items from the given lists`
+
 `intersection(*args) -> returns the intersected items from two different lists`
 
 `group(*args) -> returns a list with all the items from the multiple lists grouped`

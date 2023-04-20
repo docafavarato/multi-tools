@@ -67,6 +67,20 @@ class multitools:
                         pass
             return total
         
+        def average(*args: list):
+            '''Returns the average of all the numeric items from the given lists'''
+            sum = 0
+            grouped = list()
+            for _list in args:
+                for item in _list:
+                    try:
+                        sum += item
+                        grouped.append(item)
+                    except TypeError:
+                        pass
+            avg = sum / len(grouped)
+            return avg
+        
         def intersection(*args: list) -> list:
             group_list = list()
             intersection_list = list()
