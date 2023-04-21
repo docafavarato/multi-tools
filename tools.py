@@ -228,3 +228,10 @@ class multitools:
             '''Returns the n-th term of the sequence'''
             x = a + (pos - 1) * r
             return x
+        
+        def logarithm(a: int, b: int):
+            '''Returns the logarithm result'''
+            index = 0
+            while (a ** index != b):
+                index += 1;
+            return index
