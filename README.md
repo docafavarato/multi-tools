@@ -47,7 +47,7 @@ group(*args) # returns a list with all the items from the multiple lists grouped
 ```
 
 ```sh
-inverse() # returns the inversed list
+inverse() # returns a inversed copy of the list
 ```
 
 ```sh
