@@ -235,3 +235,40 @@ class multitools:
             while (a ** index != b):
                 index += 1;
             return index
+        
+    class db:
+        def __init__(self, *args):
+            self.args = args
+            self.data = list()
+
+        def insert(self, *values):
+            json = dict()
+            for i, arg in enumerate(self.args):
+                json[arg] = values[i]
+            self.data.append(json)
+        
+        def retrieve_all(self):
+            return self.data
+        
+        def retrieve_by(self, key, value):
+            result = list()
+            for q in self.data:
+                if q[key] == value:
+                    result.append(q)
+            return result
+        
+        def retrieve_by_contains(self, key, value):
+            result = list()
+            for q in self.data:
+                if value in str(q[key]):
+                    result.append(q)
+            return result
+        
+    
+db = multitools.db("id", "username", "email")
+db.insert(1, "doca_f", "docafavarato@gmail.com")
+db.insert(2, "chello", "chello@gmail.com")
+db.insert(3, "derek", "nz@hotmail.com")
+db.insert(4, "pedraum", "pedraumss@outlook.com")
+db.insert(5, "docaralho", "docacete@outlook.com")
+print(db.retrieve_by_contains("username", "doca"))
